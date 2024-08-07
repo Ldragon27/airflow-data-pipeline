@@ -1,0 +1,59 @@
+[2024-07-03T18:59:33.438+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-03T18:59:33.458+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: zones_dag.transform manual__2024-07-03T18:59:30.716475+00:00 [queued]>
+[2024-07-03T18:59:33.465+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: zones_dag.transform manual__2024-07-03T18:59:30.716475+00:00 [queued]>
+[2024-07-03T18:59:33.465+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2024-07-03T18:59:33.477+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2024-07-03 18:59:30.716475+00:00
+[2024-07-03T18:59:33.484+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3406) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-03T18:59:33.486+0000] {standard_task_runner.py:63} INFO - Started process 3408 to run task
+[2024-07-03T18:59:33.486+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'zones_dag', 'transform', 'manual__2024-07-03T18:59:30.716475+00:00', '--job-id', '198', '--raw', '--subdir', 'DAGS_FOLDER/zones_dag.py', '--cfg-path', '/tmp/tmpqhhn428l']
+[2024-07-03T18:59:33.488+0000] {standard_task_runner.py:91} INFO - Job 198: Subtask transform
+[2024-07-03T18:59:33.539+0000] {task_command.py:426} INFO - Running <TaskInstance: zones_dag.transform manual__2024-07-03T18:59:30.716475+00:00 [running]> on host 85a074673ee4
+[2024-07-03T18:59:33.641+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='zones_dag' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2024-07-03T18:59:30.716475+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-03T18:59:30.716475+00:00'
+[2024-07-03T18:59:33.643+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-03T18:59:33.657+0000] {python.py:237} INFO - Done. Returned value was: [          name  ...                                        coordinates
+0         115A  ...  -105.09448:40.57803,-105.09448:40.57812,-105.0...
+1         115M  ...  -105.095627903938:40.5777713481686,-105.094316...
+2         115Y  ...  -105.09573:40.578,-105.09448:40.57798,-105.094...
+3          130  ...  -105.092929601669:40.5780300722444,-105.092934...
+4        130EV  ...  -105.092806220055:40.5779078405223,-105.092816...
+..         ...  ...                                                ...
+174         Fb  ...  -105.10051:40.57333,-105.10065:40.56972,-105.0...
+175     Tier 2  ...  -105.09401:40.57641,-105.09416:40.56885,-105.0...
+176   447-451C  ...  -105.0799:40.57147,-105.08004:40.57119,-105.08...
+177  Load Zone  ...  -105.1149:40.58191,-105.11483:40.55296,-105.06...
+178  Service J  ...  -105.11468:40.58198,-105.06834:40.58138,-105.0...
+
+[179 rows x 4 columns],       name                                  guid
+0        A  031e2425-b763-4fd1-ae46-416023095c13
+1        B  e2b551f4-78cd-4730-8235-440e71be088e
+2       BG  c527e31e-3c93-475f-87ce-3a61714716d0
+3        D  b57c43e3-8856-4560-b21b-f5af5ff06710
+4        F  9dbcca02-9845-48df-90cc-121d90544d94
+..     ...                                   ...
+184  PH710  a7161545-07ba-4591-af13-7182c72c9356
+185  PE740  f172e183-f939-4e8a-b300-76dc3dbd16d6
+186   X245  c57c4d6f-1cf9-47a7-8966-9518e30949c7
+187  PHCES  420a7350-56f9-4570-a3cf-4fada83ee158
+188   P625  428f9126-0822-4ade-9ed5-1507e4c9228f
+
+[189 rows x 2 columns],                             name  ...                              polygons
+0                115A Westfall A  ...                                  None
+1                115A Westfall A  ...  7861afca-4534-4bae-8012-d9d4db01c89d
+2                115A Westfall A  ...                                  None
+3                115A Westfall A  ...                                  None
+4                115A Westfall A  ...                                  None
+...                          ...  ...                                   ...
+1325                  Load Zones  ...  fc5dac4a-550a-42fc-8a5b-bff3f4be8b1d
+1326                  Load Zones  ...                                  None
+1327  Service Spaces (J Permits)  ...                                  None
+1328  Service Spaces (J Permits)  ...  5d58310b-95fe-4618-8d53-9cef827a0745
+1329  Service Spaces (J Permits)  ...                                  None
+
+[1330 rows x 9 columns]]
+[2024-07-03T18:59:33.681+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-03T18:59:33.740+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=zones_dag, task_id=transform, run_id=manual__2024-07-03T18:59:30.716475+00:00, execution_date=20240703T185930, start_date=20240703T185933, end_date=20240703T185933
+[2024-07-03T18:59:33.780+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-03T18:59:33.811+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-03T18:59:33.813+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
