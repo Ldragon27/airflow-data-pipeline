@@ -132,6 +132,7 @@ with DAG(
         drive and parses the XML to a Element Tree.
         """
         #Pass the path of the xml document
+        #The document (zones.xml) is NOT in this GitHub project. 
         print("Reading Document...")
         try:
             file_path = '/opt/airflow/drives/zones.xml'
