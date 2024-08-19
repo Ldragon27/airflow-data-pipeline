@@ -173,7 +173,7 @@ with DAG(
         permits_df = pd.DataFrame.from_dict(df_list[1])
         zones_df = pd.DataFrame.from_dict(df_list[2])
 
-        mssql_hook = MsSqlHook(mssql_conn_id='ptsanubis', schema='LorenzoTest')
+        mssql_hook = MsSqlHook(mssql_conn_id='[INSERT_SERVER_NAME]', schema='LorenzoTest')
 
         # Truncate the tables before inserting new data
         mssql_hook.run("TRUNCATE TABLE polygons")
